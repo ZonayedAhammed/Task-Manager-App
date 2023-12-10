@@ -11,7 +11,7 @@ class UserProfileBanner extends StatelessWidget {
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder:(context) => const
         UserProfileScreen()));
-      },
+        },
       child: const ListTile(
         contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 16),
         tileColor: Colors.black54,
