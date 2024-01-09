@@ -24,10 +24,6 @@ class _UserProfileBannerState extends State<UserProfileBanner> {
         contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
         tileColor: Colors.black54,
         leading: CircleAvatar(
-          backgroundImage: NetworkImage(
-            AuthUtility.userinfo?.data?.photo ?? '',
-            // ("assets/images/personal.png"),
-          ),
           radius: 25,
         ),
         title: Text(
