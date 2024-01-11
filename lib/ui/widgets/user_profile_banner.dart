@@ -7,11 +7,9 @@ class UserProfileBanner extends StatefulWidget {
   const UserProfileBanner({
     super.key,
   });
-
   @override
   State<UserProfileBanner> createState() => _UserProfileBannerState();
 }
-
 class _UserProfileBannerState extends State<UserProfileBanner> {
   @override
   Widget build(BuildContext context) {
@@ -19,11 +17,12 @@ class _UserProfileBannerState extends State<UserProfileBanner> {
       onTap: () {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const UserProfileScreen()));
+
       },
       child: ListTile(
         contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
         tileColor: Colors.black54,
-        leading: CircleAvatar(
+        leading: const CircleAvatar(
           radius: 25,
         ),
         title: Text(
@@ -42,7 +41,6 @@ class _UserProfileBannerState extends State<UserProfileBanner> {
         trailing: IconButton(
           onPressed: () async {
             await AuthUtility.clearUserInfo();
-
             if (mounted) {
               Navigator.pushAndRemoveUntil(
                   context,

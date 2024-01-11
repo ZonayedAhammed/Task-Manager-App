@@ -2,30 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:task_manager_new/data/models/network_response.dart';
 import 'package:task_manager_new/data/services/network_caller.dart';
 import 'package:task_manager_new/data/utils/urls.dart';
-
 import 'package:task_manager_new/ui/widgets/user_profile_banner.dart';
 
 class AddNewTask extends StatefulWidget {
   const AddNewTask({
     super.key,
   });
-
   @override
   State<AddNewTask> createState() => _AddNewTaskState();
 }
-
 class _AddNewTaskState extends State<AddNewTask> {
   final TextEditingController _titleTEController = TextEditingController();
   final TextEditingController _descriptionTEController =
       TextEditingController();
   bool _addNewTaskProgress = false;
-
   Future<void> addNewTask() async {
     _addNewTaskProgress = true;
     if (mounted) {
+
       setState(() {});
     }
-
     Map<String, dynamic> requestBody = {
       "title": _titleTEController.text.trim(),
       "description": _descriptionTEController.text.trim(),

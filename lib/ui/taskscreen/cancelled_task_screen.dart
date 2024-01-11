@@ -16,7 +16,8 @@ class CancelledScreen extends StatelessWidget {
               child: ListView.separated(
                 itemCount: 20,
                 itemBuilder: (context, index) {
-                  return const TaskListTile();
+                  return SizedBox();
+                    //TaskListTile();
                 },
                 separatorBuilder: (BuildContext context, int index) {
                   return const Divider(height: 5);
